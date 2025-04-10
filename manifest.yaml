@@ -1,0 +1,60 @@
+version: 0.0.1
+type: plugin
+author: kss
+name: http_to_stream
+label:
+  en_US: http_to_stream
+  ja_JP: http_to_stream
+  zh_Hans: http_to_stream
+  pt_BR: http_to_stream
+description:
+  en_US: http response stream
+  ja_JP: http response stream
+  zh_Hans: http response stream
+  pt_BR: http response stream
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: true
+      rerank: true
+      tts: true
+      speech2text: true
+      moderation: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  settings:
+    api_url:
+    type: text-input
+    required: true
+    label:
+      en_US: API URL
+      zh_Hans: 接口地址
+    placeholder:
+      en_US: Please input your URL (e.g., http://localhost:8000/query)
+      zh_Hans: 请输入本地接口地址，例如 http://localhost:8000/quer
+  endpoints:
+    - group/http_to_stream.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-04-10T19:32:41.525547+08:00
+privacy: PRIVACY.md
+verified: false

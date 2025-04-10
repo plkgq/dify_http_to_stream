@@ -1,0 +1,12 @@
+path: "/uwu/http_to_stream/uwu"
+method: "POST"
+request:
+  content_type: application/json
+  parameters:
+    - name: payload
+      type: object
+      required: true
+      description: 通用请求体，包含 query、method 等字段
+extra:
+  python:
+    source: "endpoints/http_to_stream.py"
