@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: kss
+author: 11607068
 name: http_to_stream
 label:
   en_US: http_to_stream
